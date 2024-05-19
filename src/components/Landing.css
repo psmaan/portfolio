@@ -1,0 +1,110 @@
+/* Fade-in animation for the landing container */
+.landing-container {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover effect for social media buttons */
+.socials-button img {
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.socials-button img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Subtle bounce-in animation for the main headers */
+.landing-headers h1 {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: subtleBounceIn 1.2s forwards;
+}
+
+@keyframes subtleBounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.landing-headers h2 {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: subtleBounceIn 1.5s forwards 0.2s; /* Delayed start */
+}
+
+.main-landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-fixed {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 15%;
+    width: 10%;
+    left: 45%;
+  }
+  
+  .navbar-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Underline Animation */
+
+  .about-link, .works-link {
+    margin: 0 20px; /* Adjust spacing */
+    font-family: 'nunito';
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .about-link::after, .works-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the distance of the underline from the text */
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: lightblue; /* Adjust underline color */
+    transition: width 0.3s;
+  }
+  
+  .about-link:hover::after, .works-link:hover::after {
+    width: 100%;
+  }
+
+  .main-landing {
+    margin-top: auto;
+  }
+  
+  

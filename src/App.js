@@ -7,6 +7,7 @@ import WorksB from './components/WorksB'
 import WorksC from './components/WorksC'
 import Landing from './components/Landing';
 import About from './components/About';
+import Contact from './components/Contact';
 
 import pfp from './components/instadp.jpeg'
 import instagram from './components/logoinstagram.png'
@@ -16,7 +17,6 @@ import github from './components/logogithub.png'
 
 function App() {
 
-  const works1 = {}
 
   return (
     <>
@@ -30,6 +30,9 @@ function App() {
       </div >
       <div>
         <About></About>
+      </div>
+      <div className='contact-container'>
+        <Contact></Contact>
       </div>
     </>
   );

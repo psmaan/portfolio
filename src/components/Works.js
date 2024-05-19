@@ -4,10 +4,11 @@ import sipinor from './sipinor-showcase.png'
 import siteArrow from './site-arrow.png'
 
 const Works = React.forwardRef((props, ref) => {
+
     const worksRef = useRef(null);
 
     return (
-        <div ref={worksRef} className='works-container'>
+        <div id='workslinker' ref={worksRef} className='works-container'>
             <div className="project-content-container">
                 <div className="works-header">
                     <h1>01 / 05</h1>
@@ -37,7 +38,7 @@ const Works = React.forwardRef((props, ref) => {
                         </div>
                     </div>
                     <div className="project-link">
-                        <button>Go to Site</button>
+                        <button><a href='https://psmaan.github.io/school-dashboard'>Go to Site</a></button>
                     </div>
                 </div>
             </div>

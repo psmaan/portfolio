@@ -24,7 +24,7 @@ const Works = React.forwardRef((props, ref) => {
                     <div className="project-info b">
                         <div className="project-title">
                             <h3>Project</h3>
-                            <h2>Sipinor Designs</h2>
+                            <h2>Developer Portfolio</h2>
                         </div>
                         <div className="project-role">
                             <h3>Role</h3>
@@ -36,7 +36,7 @@ const Works = React.forwardRef((props, ref) => {
                         </div>
                     </div>
                     <div className="project-link b">
-                        <button>Go to Site</button>
+                        <button><a href='https://psmaan.github.io/portfolio'>Go to Site</a></button>
                     </div>
                 </div>
             </div>
