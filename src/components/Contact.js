@@ -70,6 +70,20 @@ export default function Contact() {
                         </div>
                     </div>
                 </form>
+                <div className="contact-socials">
+                    <div className="contact-social">
+                        <img src={phone}></img>
+                        <h3>+91 8059020005</h3>
+                    </div>
+                    <div className="contact-social">
+                        <img src={email}></img>
+                        <h3>psmaan4444@gmail.com</h3>
+                    </div>
+                    <div className="contact-social">
+                        <img src={location}></img>
+                        <h3>Pune, India</h3>
+                    </div>
+                </div>
             </div>
         </div>
     )

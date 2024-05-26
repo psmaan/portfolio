@@ -62,6 +62,7 @@ div > h1 {
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+  z-index: 1;
 }
 
 .landing-container {
@@ -70,7 +71,7 @@ div > h1 {
 }
 
 .navbar-container {
-  height: 15%;
+  height: 10%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -169,7 +170,7 @@ div > h1 {
 }
 
 .main-landing-container {
-  height: 85%;
+  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -178,18 +179,19 @@ div > h1 {
 
 .socials-sidebar {
   height: 100%;
-  width: 4%;
+  width: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .socials-button {
   background-size: contain;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .socials-button > a > img {
@@ -210,13 +212,16 @@ div > h1 {
   display: flex;
   flex-direction: row;
   position: relative;
-  left: -20px;
 }
 
 .landing-headers {
   width: 75%;
   padding-top: 40px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .landing-headers > h2 {
@@ -267,7 +272,7 @@ div > h1 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 34%;
+  width: 40%;
   position: relative;
 }
 
@@ -280,6 +285,7 @@ div > h1 {
   z-index: 0;
   transition: 0.3s;
   filter: saturate(0.5);
+  max-height: 100%;
 }
 
 .landing-image > img:hover {
@@ -369,6 +375,10 @@ div > h1 {
   width: 100%;
 }
 
+.manu-button {
+  display: none;
+}
+
 /* Underline Animation */
 
 .about-link, .works-link {
@@ -397,6 +407,11 @@ div > h1 {
 
 .main-landing {
   margin-top: auto;
+  height: 100%;
+}
+
+.hamburgers {
+  opacity: 0;
 }
 
 /* Responsive */
@@ -440,6 +455,16 @@ div > h1 {
   }
 }
 
+@media (max-height: 600px) {
+  .landing-headers > h1 {
+    font-size: 65px;
+  }
+  .landing-headers > h2 {
+    font-size: 25px;
+  }
+
+}
+
 @media (max-width: 1200px) {
   .landing-headers > h1 {
     font-size: 80px;
@@ -451,7 +476,277 @@ div > h1 {
   .LANDING-IMAGE {
     margin-left: auto;
   }
+
 }
+
+@media (max-width: 1080px) {
+  .socials-sidebar {
+    width: 5%;
+  }
+  .landing-headers {
+    width: 55%;
+    padding-left: 0;
+  }
+  .landing-headers > h1 {
+    font-size: 70px;
+  }
+  .landing-image {
+    width: 45%;
+  }
+  .landing-image > img {
+    width: 90%;
+    max-height: 100%;
+  }
+  .navbar-buttons {
+    width: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .landing-headers {
+    width: 52%;
+  }
+  .landing-image {
+    width: 48%;
+  }
+  .landing-image > img {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 910px) {
+  .landing-headers {
+    width: 50%;
+  }
+  .landing-headers > h1 {
+    font-size: 50px;
+  }
+  .landing-headers > h2 {
+    font-size: 30px;
+  }
+  .landing-image {
+    width: 50%;
+  }
+  .navbar-buttons {
+    width: 20%;
+  }
+
+}
+
+@media (max-height: 500px) {
+  .navbar-buttons > button {
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 474px) {
+  .landing-headers > h1 {
+    font-size: 40px;
+  }
+}
+
+.hiddencheck {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .main-landing-container {
+    flex-direction: column-reverse;
+  }
+  .landing-container {
+    height: 1000px;
+  }
+  .socials-sidebar {
+    width: 10%;
+    flex-direction: row;
+  }
+  .navbar-logo {
+    margin-left: 0;
+  }
+  .navbar-logo > img {
+    height: 30px;
+    width: 30px;
+  }
+  .navbar-logo > h2 {
+    font-size: 20px;
+  }
+  .navbar-buttons {
+    display: none;
+  }
+  .navbar-fixed {
+    display: none;
+  }
+  .menu-button {
+    height: 100%;
+    width: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+
+  .menu-button > .hamburgers {
+    cursor: pointer;
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    opacity: 1;
+  }
+/*
+  <input type="checkbox" className='hiddencheck'></input>
+  <svg viewBox="0 0 32 32">
+      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+      <path class="line" d="M7 16 27 16"></path>
+  
+  .menu-button > .hamburger input {
+    display: none;
+  }
+  </svg>
+  */
+  .menu-button > .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 4em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+  .main-landing {
+    flex-direction: column-reverse;
+  }
+
+  .landing-headers {
+    margin: auto;
+    width: 90%;
+    align-items: center;
+  }
+
+  .landing-headers > h1, h2 {
+    text-align: center;
+  }
+
+  .landing-headers > button {
+    margin: auto;
+  }
+  .landing-image {
+    width: 80%;
+    margin: auto;
+  }
+
+  .landing-image > img {
+    border-radius: 20px;
+  }
+}
+
+/* Menu */
+
+.menu-styler {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-styler > img {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.menu-container > h1 {
+  font-size: 100px;
+  font-family: Lato;
+  font-weight: 300;
+  margin: 20px;
+}
+
+.menu-container > h1 > a {
+  color: rgb(188, 188, 188);
+}
+
+@media (max-width: 500px) {
+  .menu-container > h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-container > h1 {
+    font-size: 60px;
+  }
+}
+
+.menu.socials-sidebar {
+  flex-direction: row;
+  height: 100px;
+  margin: 0;
+  width: 95%;
+  justify-content: flex-end;
+}
+
+.menu.socials-sidebar > div{
+  margin: 15px;
+}
+
+.menu-container h1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-container h1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: black;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.menu-container h1:hover::after {
+  width: 100%;
+  left: 0;
+  background: black; /* Change this to the desired underline color */
+}
+
 
 /* Works */
 
@@ -705,6 +1000,144 @@ div > h1 {
   border-top-left-radius: 20px;
 }
 
+@media (max-height: 768px) {
+  .skills-section {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .project-info > div {
+    margin: 0;
+  }
+  .project-info > div > h3 {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .project-info > div > h2 {
+    font-size: 20px;
+  }
+  .project-link {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .skills-section {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .project-info > div {
+    margin: 0;
+  }
+  .project-info > div > h3 {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .project-info > div > h2 {
+    font-size: 20px;
+  }
+  .project-link {
+    margin: 0;
+  }
+  .project-image {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .project-container > h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 920px) {
+  .works-container {
+    flex-direction: column;
+    height: 1100px;
+  }
+  .project-content-container {
+    width: 90%;
+    height: 550px;
+  }
+  .project-info {
+    width: 60%;
+  }
+  .project-image-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    height: 500px;
+
+  }
+  .project-image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 740px) {
+  .works-container {
+    height: 1200px;
+  }
+  .project-content-container {
+    height: 600px;
+  }
+}
+
+@media (max-width: 660px) {
+  .project-content-container {
+    height: 650px;
+  }
+  .project-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-container {
+    margin-left: 20px;
+  }
+  .project-container > h1 {
+    font-size: 40px;
+  }
+  .works-container {
+    height: 1350px;
+  }
+  .project-content-container {
+    height: 800px;
+  }
+  .skills-section > button {
+    font-size: 12px;
+  }
+  .project-info {
+    flex-direction: column;
+  }
+  .project-title {
+    width: 300px;
+  }
+  .project-info > div {
+    margin: 10px 0;
+  }
+  .project-info > div > h3, .project-info > div > h2 {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-info > div > h3 {
+    font-size: 10px;
+  }
+
+  .project-info > div > h2 {
+    font-size: 15px;
+  }
+
+}
+
+/* About */
+
 .about-container {
   background: rgb(52,55,58);
   background: radial-gradient(circle, rgb(38, 40, 42) 25%, rgba(11,9,10,1) 100%);
@@ -725,7 +1158,7 @@ div > h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 
@@ -734,7 +1167,7 @@ div > h1 {
   width: 310px;
   height: 310px;
   background-color: rgb(206, 206, 206);
-  border-radius: 50%;
+  border-radius: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -742,7 +1175,7 @@ div > h1 {
 
 .image-border > img {
   width: 300px;
-  border-radius: 50%;
+  border-radius: 1000px;
   filter: saturate(0.5);
   transition: 0.2s;
 }
@@ -765,6 +1198,7 @@ div > h1 {
   font-weight: 400;
   font-size: 25px;
   color: #dadada;
+  text-align: center;
 }
 
 .about-left > a {
@@ -814,6 +1248,7 @@ div > h1 {
 .about-skills {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .about-skill {
@@ -843,6 +1278,63 @@ img.tailwind {
   font-weight: 300;
   color: #dadada;
 }
+
+@media (max-width: 1080px) {
+  .about-skill > img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-left {
+    margin-left: 0;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    height: 1100px;
+  }
+  .about-main {
+    flex-direction: column;
+  }
+  .about-left {
+    width: 100%;
+    height: 550px;
+  }
+  .about-right {
+    width: 100%;
+    height: 550px;
+    align-items: center;
+  }
+  .about-skills {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-left > h3 {
+    font-size: 20px;
+  }
+  .about-left > a {
+    margin-bottom: 50px;
+  }
+  .about-container {
+    height: 1200px;
+  }
+  .about-left {
+    height: 600px;
+  }
+  .about-right > h1 {
+    font-size: 20px;
+  }
+  .about-right > h2 {
+    font-size: 30px;
+  }
+}
+
 
 /* Contact Page */
 
@@ -992,4 +1484,79 @@ textarea:valid~label {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@media (max-height: 600px) {
+  .contact-subheading > h1 {
+    font-size: 80px;
+  }
+  .contact-subheading > h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 880px) {
+  .contact-subheading > h1 {
+    font-size: 80px;
+  }
+  .contact-subheading > h3 {
+    font-size: 25px;
+  }
+}
+
+.contact-right > .contact-socials {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .contact-container {
+    flex-direction: column;
+    height: 800px;
+  }
+  .contact-left {
+    width: 100%;
+    height: 250px;
+  }
+  .contact-left > .contact-socials {
+    display: none;
+  }
+  .contact-right {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-right > .contact-socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-left {
+    margin-top: 30px;
+    height: 200px;
+  }
+  .contact-subheading > h1 {
+    font-size: 60px;
+  }
+  .contact-subheading > h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 477px) {
+  .contact-container {
+    flex-direction: column;
+    height: 900px;
+  }
+  .contact-left {
+    width: 100%;
+    height: 300px;
+  }
+  .contact-subheading {
+    padding-left: 20px;
+  }
 }

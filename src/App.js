@@ -16,13 +16,9 @@ import twitter from './components/logotwitter.png'
 import github from './components/logogithub.png'
 
 function App() {
-
-
   return (
     <>
-      <div className='landing-container'>
-        <Landing></Landing>
-      </div >
+      <Landing></Landing>
       <div>
         <Works></Works>
         <WorksB></WorksB>
