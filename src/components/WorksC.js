@@ -36,7 +36,7 @@ const Works = React.forwardRef((props, ref) => {
                         </div>
                     </div>
                     <div className="project-link c">
-                        <button><a href='https://psmaan.github.io/ikjot'>Go to Site</a></button>
+                        <button><a target='blank' href='https://psmaan.github.io/ikjot'>Go to Site</a></button>
                     </div>
                 </div>
             </div>

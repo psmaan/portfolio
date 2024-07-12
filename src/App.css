@@ -770,6 +770,16 @@ div > h1 {
   background: radial-gradient(circle, rgba(221,184,146,1) 44%, rgba(184,150,120,1) 100%);
 }
 
+.works-container.one {
+  background: rgb(117,173,216);
+  background: linear-gradient(180deg, rgba(117,173,216,1) 15%, rgba(53,78,103,1) 100%); 
+}
+
+.works-container.two {
+  background: rgb(136,131,240);
+  background: linear-gradient(180deg, rgba(136,131,240,1) 15%, rgba(85,82,149,1) 100%);
+}
+
 .project-content-container {
   width: 50%;
   height: 100%;
@@ -794,6 +804,14 @@ div > h1 {
   color: #b08968;
 }
 
+.works-header.one > h1 {
+  color: #2a5a96;
+}
+
+.works-header.two > h1 {
+  color: #625eab;
+}
+
 .project-container {
   display: flex;
   flex-direction: column;
@@ -813,6 +831,14 @@ div > h1 {
 
 .project-container.c > h1{
   color: #9c6644;
+}
+
+.project-container.one > h1{
+  color: #2a5a96;
+}
+
+.project-container.two > h1{
+  color: #554fbf;
 }
 
 .skills-section {
@@ -846,10 +872,21 @@ div > h1 {
   border: 1.5px solid #b08968;
 }
 
+.skills-section.one > button {
+  color: #a2d7e5;
+  border: 1.5px solid #a2d7e5;
+}
+
+.skills-section.two > button {
+  color: #908aff;
+  border: 1.5px solid #908aff;
+}
+
 .project-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
 }
 
 .project-info > div {
@@ -884,6 +921,22 @@ div > h1 {
 
 .project-info.c > div > h2 {
   color: #8a5a44;
+}
+
+.project-info.one > div > h3 {
+  color: #2a5a96;
+}
+
+.project-info.one > div > h2 {
+  color: #2a5a96;
+}
+
+.project-info.two > div > h3 {
+  color: #908aff;
+}
+
+.project-info.two > div > h2 {
+  color: #908aff;
 }
 
 .project-link {
@@ -958,6 +1011,44 @@ div > h1 {
 
 .project-link.c > button:hover > a {
   color: #ddb892;
+}
+
+.project-link.one > button {
+  border: 2px solid #a2d7e5;
+  color: #a2d7e5;
+}
+
+.project-link.one > button:hover {
+  background: #a2d7e5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-link.one > button > a {
+  color: #a2d7e5;
+  transition: 0.3s;
+}
+
+.project-link.one > button:hover > a {
+  color: #e1e1e1;
+}
+
+.project-link.two > button {
+  border: 2px solid #8883f0;
+  color: #8883f0;
+}
+
+.project-link.two > button:hover {
+  background: #8883f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-link.two > button > a {
+  color: #8883f0;
+  transition: 0.3s;
+}
+
+.project-link.two > button:hover > a {
+  color: #e1e1e1;
 }
 
 .project-link > button > img {

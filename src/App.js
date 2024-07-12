@@ -3,6 +3,8 @@ import './App.css';
 import { useRef, useEffect } from 'react';
 
 import Works from './components/Works'
+import Works1 from './components/Works1'
+import Works2 from './components/Works2';
 import WorksB from './components/WorksB'
 import WorksC from './components/WorksC'
 import Landing from './components/Landing';
@@ -21,6 +23,8 @@ function App() {
       <Landing></Landing>
       <div>
         <Works></Works>
+        <Works1></Works1>
+        <Works2></Works2>
         <WorksB></WorksB>
         <WorksC></WorksC>
       </div >
