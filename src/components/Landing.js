@@ -5,7 +5,7 @@ import instagram from './logoinstagram.png';
 import linkedin from './logolinkedin.png';
 import twitter from './logotwitter.png';
 import github from './logogithub.png';
-import mainImage from './portfolio-landing.jpeg';
+import mainImage from './pfpnew.jpeg';
 import menuCross from './cross.png'
 import menuImg from './menuimg.png'
 
